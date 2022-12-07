@@ -1,0 +1,18 @@
+<h1>Flight No: <%= @flight.number %></h1>
+
+<div class="seats">
+  <% @seat_view.each do |seat_group| %>
+    <div class="group"> 
+      <% seat_group.each do |seat_col| %>
+        <div class="column">
+          <% seat_col.each do |seat| %>
+            
+            <div class="seat <%= seat.seat_type%>">
+              <%= seat.passenger_no %>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>

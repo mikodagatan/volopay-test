@@ -1,0 +1,39 @@
+.group {
+  display: flex;
+  margin: 0 10px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.seats {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+}
+
+.seat {
+  border-radius: 5px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  width: 40px;
+  height: 40px;
+}
+
+.seat.aisle {
+  background-color: #5981b8;
+}
+
+.seat.window {
+  background-color: #a2b966;
+}
+
+.seat.middle {
+  background-color: #b35751;
+}
+

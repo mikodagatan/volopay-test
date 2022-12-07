@@ -1,0 +1,17 @@
+<h1>Create new Seat Plan</h1>
+
+<div>
+  <%= form_tag '/seat_plan', method: :post do %>
+    <div class="form-control">
+      <%= label_tag 'Seating rows and columns' %>
+      <%= text_field_tag :seating %>
+    </div>
+
+    <div class="form-control">
+      <%= label_tag 'Number of passengers' %>
+      <%= number_field_tag :num_of_passengers %>
+    </div>
+
+    <%= submit_tag "Create seat plan", class: "submit" %>
+  <% end %>
+</div>

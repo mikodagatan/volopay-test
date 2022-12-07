@@ -2,15 +2,15 @@
 
 module Seating
   class GenerateSeatGroup < Service
-    PARAMS = %i[flight rows columns group_index group_length column_offset].freeze
+    PARAMS = %i[flight rows columns group_index seating_length column_offset].freeze
 
     attr_reader(*PARAMS, :first_group, :last_group)
 
     def initialize(**params)
       init_instance_vars(params, PARAMS)
 
-      @first_group = group_index.zero?
-      @last_group = group_index + 1 == group_length
+      @first_group = group_index == 1
+      @last_group = group_index == seating_length
     end
 
     def call
@@ -20,7 +20,7 @@ module Seating
           column += 1
           assigned_column = column_offset + column
           seat_type = Seating::AssignSeatType.new(column:, columns:, first_group:, last_group:).call
-          Seat.create(flight:, seat_type:, row:, column: assigned_column)
+          Seat.create(flight:, seat_type:, row:, column: assigned_column, group: group_index)
         end
       end
     end

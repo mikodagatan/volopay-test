@@ -7,6 +7,8 @@ class CreateSeats < ActiveRecord::Migration[7.0]
       t.string :seat_type
       t.integer :row
       t.integer :column
+      t.integer :passenger_no
+      t.integer :group
 
       t.timestamps
     end

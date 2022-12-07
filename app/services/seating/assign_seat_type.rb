@@ -1,14 +1,12 @@
 # frozen_string_literal: true
 
 module Seating
-  class AssignSeatType
-    attr_reader :column, :columns, :first_group, :last_group
+  class AssignSeatType < Service
+    PARAMS = %i[column columns first_group last_group].freeze
+    attr_reader(*PARAMS)
 
     def initialize(**params)
-      @column = params[:column]
-      @columns = params[:columns]
-      @first_group = params[:first_group]
-      @last_group = params[:last_group]
+      init_instance_vars(params, PARAMS)
     end
 
     def call

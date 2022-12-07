@@ -12,7 +12,8 @@ module Seating
     def call
       column_offset = 0
 
-      seating.each_with_index do |(rows, columns), group_index|
+      seating.each_with_index do |(columns, rows), index|
+        group_index = index + 1
         Seating::GenerateSeatGroup.new(
           flight:, rows:, columns:, group_index:, column_offset:,
           seating_length: seating.length
