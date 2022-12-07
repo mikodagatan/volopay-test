@@ -10,9 +10,22 @@
 - RSpec
 - FactoryBot
 
+## How to test
+
+```
+rails s
+go to localhost:3000
+input the data on `Seating rows and columns` and `Number of passengers`
+click `Create seat plan`
+```
+
+## Why not use an endpoint?
+
+It would help make my code a lot cleaner as I'll be using serializers. But, I decided I'd show the visual portion of the seat plan for the test.
+
 ## Why use Rails views?
 
-My proficiency on the front end is for ReactJS. However, since we're not being tested on the FE, I decided to just use the Rails views.
+My proficiency on the FE is with ReactJS. However, since we're not being tested on the FE, I decided to just use the Rails views.
 
 ## How did you get 100% Coverage?
 
