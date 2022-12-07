@@ -12,6 +12,7 @@ module Seating
       seats = flight.seats.aisle.ordered +
               flight.seats.window.ordered +
               flight.seats.middle.ordered
+
       seats.each do |seat|
         break if @num > num_of_passengers
 

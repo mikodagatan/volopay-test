@@ -7,5 +7,4 @@ class Seat < ApplicationRecord
 
   scope :ordered, -> { order(row: :asc, column: :asc) }
   scope :col_ordered, -> { order(column: :asc, row: :asc) }
-
 end

@@ -6,9 +6,8 @@ module Flights
       def call
         flight = Flight.new(number: unique_number)
 
-        return flight if flight.save
-
-        false
+        flight.save
+        flight
       end
 
       def unique_number

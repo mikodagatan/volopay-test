@@ -18,10 +18,6 @@ module Seating
 
     private
 
-    def create_flight
-      errors << 'Cannot create flight' unless flight
-    end
-
     def flight
       @flight ||= Flights::CreateFlight.call
     end
