@@ -9,10 +9,8 @@
 #
 # See https://docs.rubocop.org/rubocop/configuration
 require:
-  - rubocop/cop/internal_affairs
-  - rubocop-performance
+  - rubocop-rails
   - rubocop-rspec
-
 AllCops:
   NewCops: enable
   Exclude:
@@ -152,3 +150,6 @@ Style/ClassAndModuleChildren:
 
 Lint/MissingSuper:
   Enabled: false
+
+Metrics/AbcSize:
+  CountRepeatedAttributes: false
