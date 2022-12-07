@@ -8,6 +8,7 @@ module Seating
     end
 
     def call
+      # NOTE: create nested array data in groups > columns > seat records.
       group_data = []
       groups = @seats.pluck(:group).uniq.sort
 

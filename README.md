@@ -1,24 +1,23 @@
-# README
+# Volopay Test
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Miguel Alberto U. Dagatan
 
-Things you may want to cover:
+## Tech Stack
 
-* Ruby version
+- Rails 7.0.4
+- Rails Views FE
+- Rubocop
+- RSpec
+- FactoryBot
 
-* System dependencies
+## Why use Rails views?
 
-* Configuration
+My proficiency on the front end is for ReactJS. However, since we're not being tested on the FE, I decided to just use the Rails views.
 
-* Database creation
+## How did you get 100% Coverage?
 
-* Database initialization
+I removed some boilerplate code from the coverage of SimpleCov.
 
-* How to run the test suite
+## What could you do to make this better?
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+I think the most controversial part of the code is the `services/seating/generate_seat_view.rb`. I would normally get portions separated into `named blocks / classes` in order to organize my code. But for this one, I resorted to naming instead. Separating them may cause more confusion.
